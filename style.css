@@ -1,0 +1,283 @@
+/* -------- Reset -----------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+/* ------------- Navbar ----------------*/
+
+nav {
+  top: 0;
+  position: fixed;
+  display: flex;
+  height: 80px;
+  width: 100%;
+  background: #1b1b1b;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px 0 100px;
+  flex-wrap: wrap;
+  z-index: 10;
+}
+nav .logo {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 600;
+}
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+nav ul li {
+  margin: 0 15px 0 10px;
+}
+nav ul li a {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+nav ul li a.active,
+nav ul li a:hover {
+  color: #111;
+  background: #fff;
+}
+nav .menu-btn i {
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+input[type="checkbox"] {
+  display: none;
+}
+@media (max-width: 1000px) {
+  nav {
+    padding: 0 40px 0 50px;
+  }
+}
+@media (max-width: 920px) {
+  nav .menu-btn i {
+    display: block;
+  }
+  #click:checked ~ .menu-btn i:before {
+    content: "\f00d";
+  }
+  nav ul {
+    z-index: 100;
+
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    background: #111;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  #click:checked ~ ul {
+    left: 0;
+  }
+  nav ul li {
+    z-index: 100;
+
+    width: 100%;
+    margin: 40px 0;
+  }
+  nav ul li a {
+    z-index: 100;
+    width: 100%;
+    margin-left: -100%;
+    display: block;
+    font-size: 18px;
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  #click:checked ~ ul li a {
+    margin-left: 0px;
+  }
+  nav ul li a.active,
+  nav ul li a:hover {
+    background: none;
+    color: cyan;
+  }
+}
+
+/* ---------------Landing Page  --------------*/
+.main {
+  position: relative;
+  top: 80px;
+  background-color: black;
+}
+.container {
+  margin: auto;
+  padding: 100px;
+  max-width: 1200px;
+  /* margin-top: 100px; */
+  display: flex;
+  justify-content: space-around;
+}
+.container .right-img {
+  position: relative;
+  top: 120px;
+  bottom: 10px;
+  height: 200px;
+  width: 400px;
+}
+
+.container .arrow {
+  top: 490px;
+  position: absolute;
+  height: 25px;
+  width: 12px;
+}
+
+.container .left h1 {
+  color: white;
+  font-size: 95px;
+  letter-spacing: 5px;
+  animation-name: animate;
+  animation-duration: 5s;
+}
+@keyframes animate {
+  from {
+    font-size: 95px;
+    color: white;
+  }
+  to {
+    font-size: 105px;
+    color: lightpink;
+  }
+}
+@media screen and (max-width: 700px) {
+  .container {
+    flex-direction: column;
+    width: 100vw;
+  }
+  .container .left h1 {
+    font-size: 70px;
+  }
+}
+/* -------------About Us ------------*/
+.about-us {
+  margin: 200px auto 100px auto;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-around;
+}
+.about-us .left img {
+  height: 450px;
+  width: 550px;
+  margin-right: 50px;
+}
+
+.about-us .right h2 {
+  letter-spacing: 3px;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+.about-us .right p {
+  font-size: 22px;
+}
+@media screen and (max-width: 700px) {
+  .about-us {
+    flex-direction: column;
+  }
+  .about-us .left img {
+    margin: 50px auto;
+    align-items: center;
+    height: 200px;
+    width: 300px;
+  }
+}
+/* Our Services */
+.services-container {
+  max-width: 1200px;
+  margin: auto;
+}
+.services-container h2 {
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+.services {
+  display: flex;
+  gap: 50px;
+  justify-content: space-evenly;
+  overflow-x: scroll;
+}
+.service {
+  /* height: min-content; */
+  margin-left: 50px;
+  padding: 20px 20px;
+  border: 2px solid black;
+}
+.service h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.service:hover {
+  animation-delay: 0.3s;
+  animation-name: onHover;
+  animation-duration: 3s;
+}
+@keyframes onHover {
+  from {
+  }
+  to {
+    background-color: black;
+    color: white;
+  }
+}
+
+/* Contact Us */
+
+.contact-container {
+  background-color: black;
+  height: 100vh;
+}
+.contact-us {
+  /* margin-top: 100px; */
+  /* margin: 100px auto; */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.contact-us h2 {
+  /* margin-top: 100px; */
+  color: white;
+  font-size: 35px;
+  margin: 50px 40%;
+}
+input {
+  background-color: white;
+  color: black;
+  width: 1000px;
+  margin: 10px 50px 5px 50px;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.btn {
+  background-color: white;
+  text-color: black;
+  margin-top: 20px;
+  margin-left: 50px;
+  border: none;
+  width: 150px;
+  height: 35px;
+}
+@media screen and(max-width: 700px) {
+  .contact-container {
+    width: 10vw;
+  }
+  input {
+    width: 600px;
+  }
+}

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="This is an business landing page" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+
+    <title>Business Landing Page</title>
+  </head>
+  <body>
+    <!-- Navbar Start-->
+
+    <nav>
+      <div class="logo">Apple</div>
+      <input type="checkbox" id="click" />
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Our Services</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+    <!-- Navbar End-->
+
+    <!-- Landing Page Section -->
+    <div id="about" class="main">
+      <div class="container">
+        <div class="left">
+          <h1>
+            BUSINESS
+            <br />
+            LANDING
+            <br />
+            PAGE
+          </h1>
+        </div>
+        <a href="#services">
+          <img class="arrow" src="./images/Arrow.png" alt="arrow" />
+        </a>
+        <div class="right">
+          <img
+            class="right-img"
+            src="./images/left.png"
+            alt="Image about the business"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- Landing Page section end -->
+
+    <!-- About us -->
+    <div class="about-us">
+      <div class="left">
+        <img src="./images/About us.png" alt="About us images" />
+      </div>
+      <div class="right">
+        <h2>ABOUT US</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+          earum quaerat necessitatibus sequi labore laboriosam magnam deserunt
+          optio aliquid, id ea quo, voluptatem quibusdam omnis a dolorem fuga
+          hic quis! Facilis odio aspernatur impedit atque beatae placeat rem
+          illum deserunt quia minus delectus a aut ab facere perferendis, quis
+          dolorem voluptates quidem officia libero! Mollitia exercitationem sint
+          possimus consequatur Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Minima, corporis!
+        </p>
+      </div>
+    </div>
+    <!-- About us end -->
+
+    <!-- Our services -->
+    <div id="services" class="services-container">
+      <h2>OUR SERVICES</h2>
+      <div class="services">
+        <div class="service">
+          <h4>Service 1</h4>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Voluptatibus quaerat vel dolor molestias quod libero cumque
+          </p>
+        </div>
+        <div class="service">
+          <h4>Service 2</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi
+            repellat tempora, quisquam debitis modi fugiat ab voluptate ullam
+          </p>
+        </div>
+        <div class="service">
+          <h4>Service 3</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+            maiores quisquam est natus, officia rem qui rerum labore voluptate.
+          </p>
+        </div>
+        <div class="service">
+          <h4>Service 4</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo autem
+            eaque inventore facere tenetur quisquam quasi iusto, cum facilis
+          </p>
+        </div>
+        <div class="service">
+          <h4>Service 5</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo autem
+            eaque inventore facere tenetur quisquam quasi iusto, cum facilis
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact us -->
+    <div class="contact-container">
+      <div id="contact" class="contact-us">
+        <h2>CONTACT US</h2>
+        <form>
+          <input type="text" id="fname" placeholder="First Name" required />
+          <br />
+          <input type="text" id="lname" placeholder="Last Name" required />
+          <br />
+          <input type="email" id="email" placeholder="Email Address" required />
+          <br />
+
+          <input type="text" placeholder="Reason For Contacting" />
+          <br />
+
+          <button class="btn" onclick="func()">Submit</button>
+        </form>
+      </div>
+    </div>
+    <script>
+      function func() {
+        var fname = document.getElementById("fname").value;
+        var lname = document.getElementById("lname").value;
+        var email = document.getElementById("email").value;
+        if (fname && lname && email) {
+          alert("Form submmited Sucessfully!");
+        }
+      }
+    </script>
+  </body>
+</html>
